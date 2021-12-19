@@ -1,0 +1,1375 @@
+/**************************************
+* Common css and font starts from here 
+***************************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Some color variable */
+:root {
+    --btn-color: #ff0000;
+    --black-color: #0d0d0d;
+    --paragraph-color: #aaa;
+    --white-color: white;
+    --ratting-color: #ffc249;
+    --shy-color: #444;
+
+}
+
+
+/* Initial loader gif css */
+.initialLoader{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/**********************************
+* Common css and font ends to here 
+***********************************/
+
+
+/******************************
+* Header css starts from here 
+******************************/
+
+nav.navbar.navbar-expand-lg.navbar-light.fixed-top {
+    padding: 2px 0px;
+    background: aliceblue;
+}
+
+span.companyName {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.secureRoute {
+    display: flex;
+}
+
+.accountPage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accountPage span {
+    margin-right: 40px;
+}
+
+.me-auto.navbar-nav {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+div#basic-navbar-nav {
+    margin-left: auto;
+}
+
+a#navBar {
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0px 12px;
+    padding: 8px;
+    transition: .3s;
+}
+
+a#navBar:hover {
+    background-color: rgb(227 47 47 / 6%);
+    border-radius: 50px;
+}
+
+
+.signinBtn {
+    padding: 8px 15px;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    border-radius: 50px;
+    font-size: 15px;
+    transition: .3s;
+    border: none;
+}
+
+.buyBtn{
+    padding: 8px 15px;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--btn-color);
+    border-radius: 50px;
+    font-size: 15px;
+    transition: .3s;
+    border: none;
+    margin-top: 10px;
+}
+
+.buyBtn:hover {
+    transition: .3s;
+    background: #ad0707;
+}
+
+
+.signinBtn:hover {
+    background-color: #2a2a2a;
+    color: var(--white-color);
+}
+
+.createAccBtn {
+    background: var(--btn-color);
+    border-radius: 50px;
+    border-style: none;
+    margin: 0px -10px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 35px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+}
+
+.regularBtn {
+    background: var(--btn-color);
+    border-radius: 50px;
+    border-style: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 35px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .3s;
+    margin: 0px 5px;
+}
+
+.regularBtn:hover {
+    background: #0f899c;
+}
+/******************************
+* Header css ends to here 
+******************************/
+
+
+
+/******************************
+* Service Navigation css here  
+******************************/
+.homePage {
+    margin: 90px 0px;
+}
+
+.sTab {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 30px;
+}
+
+.tabBox {
+    border: 1px solid var(--black-color);
+    padding: 15px 10px;
+    display: flex;
+    margin: 0px 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+.tabBox:hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.tabBox:hover h3.serviceName{
+    color: var(--white-color);
+}
+
+h3.serviceName {
+    transition: .5s;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+span.serviceIcon {
+    font-size: 25px;
+}
+
+
+/*************************************
+* Service navigation css ends to here 
+*************************************/
+
+
+
+/******************************************
+* Serch tour packages css starts from here
+*****************************************/
+
+.searchSection {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h3.existAlert {
+    font-size: 20px;
+    color: red;
+}
+
+h3.successAlert {
+    font-size: 25px;
+    color: rgb(0, 255, 149);
+}
+
+.searchField {
+    width: 100%;
+}
+
+.sectionWrapper {
+    width: 100%;
+    /* margin: auto; */
+    text-align: center;
+}
+
+input#searchInput {
+    width: 60%;
+    outline: navajowhite;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 35px;
+    font-size: 18px;
+}
+
+span.searchIcon.fas.fa-search {
+    font-size: 22px;
+    color: var(--black-color);
+    position: relative;
+    left: 35px;
+    top: 3px;
+    cursor: pointer;
+}
+
+span.searchIcon.fas.fa-search:hover {
+     color: #222;
+}
+/**********************************************
+* Search tour packages section css ends to here 
+***********************************************/
+
+
+/* Cart page css */
+.cartTableHead {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background: #eee;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+
+span.tableHead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.cartFood {
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+img.orderFood {
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    height: 80px;
+}
+
+span.cartInfo {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/**************************************
+* Feature section css starts from here
+***************************************/
+
+.featuresSection {
+    position: absolute;
+    width: 100%;
+    top: 85vh;
+  
+}
+
+.featureBox {
+    background: var(--btn-color);
+    color: white;
+    padding: 20px 15px;
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+}
+
+.featureBox:hover{
+    background: #056e7e;
+    /* color: black; */
+}
+
+.featureBox .icon i {
+    color: var(--btn-color);
+    background: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    left: 190px;
+    font-size: 20px;
+    top: -40px;
+    transition: all ease-in-out .3s;
+}
+
+.featureBox:hover .icon i{
+    color: white;
+    background: var(--btn-color)
+}
+
+h2.number {
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 40px;
+}
+
+h3.name {
+    font-size: 22px;
+    font-weight: 800;
+}
+/**********************************
+* Feature section css ends to here
+***********************************/
+
+
+
+
+
+/***************************************
+* Packagea section css starts from here
+****************************************/
+
+.packagesSection {
+    padding: 70px 0px 0px 0px;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+h2.sectionName {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+span.highlightPart {
+    color: var(--btn-color);
+}
+
+.packageBox {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.nameAndDestination{
+    cursor: pointer;
+}
+
+
+.nameAndDestination:hover h3.name {
+    color: rgb(95, 94, 94);
+    text-decoration: underline;
+}
+
+
+.packageBox:hover span.savePack {
+    display: block;
+}
+
+.packageBox:hover span.savedPack {
+    display: block;
+}
+
+.imgAndType {
+    width: 100%;
+    margin-bottom: -12px;
+    position: relative;
+}
+
+span.savedPack {
+    cursor: auto;
+    position: absolute;
+    left: 5px;
+    transition: .3s;
+    top: 8px;
+    background: #ff0000;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: var(--white-color);
+    border-radius: 25px;
+    display: none;
+}
+
+
+span.saveAlert {
+    background: #ff0000;
+    padding: 0px 20px;
+    color: var(--white-color);
+    border-radius: 8px;
+    position: absolute;
+    left: 45px;
+    top: 5px;
+    display: none;
+}
+
+span.savedPack:hover span.saveAlert{
+    display: block;
+}
+
+
+span.savePack {
+    cursor: pointer;
+    position: absolute;
+    left: 5px;
+    transition: .3s;
+    top: 8px;
+    background: black;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: var(--white-color);
+    border-radius: 25px;
+    display: none;
+}
+
+span.savePack:hover {
+    background-color: #ff0000;
+}
+
+span.rattings {
+    color: red;
+}
+
+
+span.packageType {
+    color: var(--white-color);
+    background: #ff0000;
+    position: relative;
+    left: 84%;
+    top: -30px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 3px 8px;
+}
+
+.imgAndType img {
+    width: 100%;
+    height: 250px;
+}
+
+h3.name {
+    font-size: 22px;
+    font-weight: 800;
+    transition: .3s;
+    margin-bottom: 3px;
+}
+
+.destinationWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span.price {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+span.destination {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--btn-color);
+}
+
+.destination i {
+    padding-right: 5px;
+}
+
+hr {
+    color: #06060647;
+    height: 1px;
+}
+
+.catAndPrice {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    font-size: 22px;
+}
+
+span.category {
+    font-weight: 400;
+    color: #3e4242;
+}
+
+.shotrDesc {
+    padding: 0px 15px;
+    font-weight: 400;
+    color: #444;
+}
+
+input#listname {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+}
+
+span.modalHead {
+    font-size: 20px;
+}
+
+.modal-content {
+    width: 70%;
+    margin: auto;
+}
+/**********************************
+* Packages section css ends to here
+***********************************/
+
+
+
+
+/*******************************************
+* Book package section css starts from here
+********************************************/
+.bookingPackageDetail {
+    padding: 150px 0px;
+    background: #eee;
+}
+
+.singlePackageDetail {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px var(--btn-color)85;
+}
+
+.packageThumbnail img {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+}
+
+h1.packageTitle {
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.dualInfo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.bookingForm {
+    background: linear-gradient(rgb(0 0 0 / 52%), rgb(0 0 0 / 52%)), url("http://www.nicdarkthemes.com/themes/travel/wp/demo/summer-holiday/wp-content/uploads/sites/4/2018/11/pk-sm-01.jpg");
+    padding: 150px 0px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.someAddition {
+    color: white;
+    text-align: center;
+}
+
+h2.title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.someAddition p.desc {
+    font-size: 20px;
+    font-weight: 500;
+    width: 35%;
+    margin: auto;
+    line-height: 40px;
+    padding: 10px 0px 40px 0px;
+}
+
+
+
+/***************************************
+* Book package section css ends to here
+****************************************/
+
+
+
+
+
+
+/***************************************
+* Login section css start from here
+****************************************/
+.loginPage {
+    padding: 150px 0px;
+    background: #f7f7f7;
+}
+
+.loginImg img {
+    width: 100%;
+}
+
+.loginForm {
+    width: 70%;
+    margin: auto;
+    padding: 25px 15px;
+    background: white;
+    border-radius: 10px;
+}
+
+input#inputHolder {
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px solid var(--btn-color);
+    margin: 10px 0px;
+    outline: none;
+    width: 100%;
+}
+
+h3.title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+}
+
+button.apiOption {
+    width: 100%;
+    color: white;
+    border-radius: 100px;
+    padding: 7px 0px;
+    background: var(--btn-color);
+    border: none;
+    margin: 8px 0px;
+    font-size: 18px;
+}
+
+button.apiOption img {
+    width: 35px;
+    text-align: left;
+    margin-right: auto;
+}
+
+/***************************************
+* Login package section css ends to here
+****************************************/
+
+
+
+
+
+/********************************************
+* Booked package section css starts from here
+*********************************************/
+.bookedPackage {
+    padding: 100px 0px;
+    text-align: center;
+}
+
+.pageTitle {
+    margin: 30px 0px;
+}
+
+.bookedCard {
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    box-shadow: 1px 1px 6px var(--btn-color)ad;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.titleAndSl {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.imgAndPrice img {
+    width: 130px;
+    border-radius: 10px;
+    margin-right: 70px;
+}
+
+.imgAndPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span.serialNo {
+    margin-right: 30px;
+}
+
+.action {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    font-weight: 700;
+}
+
+span.type {
+    margin-right: 35px;
+    color: #ffffff;
+    background: var(--btn-color);
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+span.updateStatus{
+    cursor: pointer;
+    background: black;
+    color: var(--btn-color);
+    padding: 3px 7px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+span.remove {
+    font-size: 35px;
+    color: red;
+    border-radius: 100%;
+    background: var(--btn-color);
+    padding: 0px 12px;
+    cursor: pointer;
+}
+
+
+span.remove:hover {
+    color: #ffffff;
+    transition: all ease-in-out .5s;
+    background: red;
+}
+/***************************************
+* Booked package section css ends to here
+****************************************/
+
+
+/********************************************
+* Post new package page css starts from here
+*********************************************/
+.addPackages {
+    padding: 100px 0px;
+    background: #eee;
+}
+/***************************************
+* Post new package page css ends to here
+****************************************/
+
+
+.popularDestination {
+    padding: 100px 0px;
+}
+
+.destination {
+    width: 100%;
+}
+
+.destination img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+span.destinationName {
+    position: relative;
+    left: 35%;
+    bottom: 190px;
+    width: 100px;
+    border-radius: 3px;
+    color: black;
+    background: white;
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.destination:hover .destinationName{
+   background: black;
+   color: white;
+   transition: .5s;
+}
+
+
+
+/* Popular food css */
+img.foodImage {
+    width: 100%;
+    height: 170px;
+}
+
+span.saleBadge {
+    position: relative;
+    bottom: 160px;
+    left: 8px;
+    background: #ff0000;
+    color: var(--white-color);
+    padding: 2px 5px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+h3.foodName {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+span.Price {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+span.disablePrice {
+    color: #f58484;
+    text-decoration: line-through;
+    margin: 0px -20px;
+}
+/* Footer area css starts from here  */
+
+.footerSection {
+    padding: 50px 0px 20px 0px;
+    background: #eee;
+}
+
+
+
+/* Not found page css  */
+
+.notFound {
+    padding: 100px 0px;
+    background: #ffc249;
+    text-align: center;
+}
+
+.details img {
+    width: 100%;
+}
+
+
+/* Saved trip page css here */
+.savedCard {
+    background: var(--white-color);
+    box-shadow: 1px 0px 5px #e9c2c2;
+    border-radius: 5px;
+    padding: 15px 10px;
+    position: relative;
+}
+
+.savedCard:hover span.btns{
+   display: block;
+
+}
+
+.nameAndImg {
+    display: flex;
+    justify-content: space-between;
+}
+
+img.miniImg {
+    width: 40%;
+    border-radius: 10px;
+    height: 100px;
+}
+
+h3.cardName {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+span.btns {
+    display: none;
+    position: absolute;
+    right: 10px;
+}
+
+.actionBtn {
+    text-align: right;
+}
+
+button.actionBtn {
+    border: navajowhite;
+    margin: 10px 5px 0px 5px;
+    background: var(--black-color);
+    color: var(--white-color);
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+span.confirMessage {
+    font-size: 18px;
+    display: block;
+}
+
+.alertCnf {
+    text-align: right;
+}
+
+span.alertText {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--btn-color);
+    display: block;
+}
+
+span.cartBadge {
+    position: relative;
+    bottom: 35px;
+    left: 65%;
+    cursor: pointer;
+    background: #ff0000;
+    color: var(--white-color);
+    padding: 5px 10px;
+    font-size: 17px;
+    border-radius: 6px;
+    visibility: hidden;
+}
+
+span.cartBadge2 {
+    position: relative;
+    bottom: 35px;
+    left: 65%;
+    background: #ff0000;
+    color: var(--white-color);
+    padding: 5px 10px;
+    font-size: 17px;
+    border-radius: 6px;
+    visibility: hidden;
+}
+
+.packageBox:hover span.cartBadge {
+    visibility: visible;
+}
+
+.packageBox:hover span.cartBadge2 {
+    visibility: visible;
+}
+
+span.cartBadge:hover {
+    background-color: #b30a0a;
+    transition: .3s;
+}
+
+img.profileImage {
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+
+
+/* User information pop up toggle css */
+.userProfileInfo {
+    position: absolute;
+    background: white;
+    padding: 10px 0px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    top: 70px;
+    right: 15px;
+    box-shadow: 1px 1px 5px #898181f2;
+}
+
+.profileImageLg {
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
+
+h3.userName {
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 12px 0px;
+    font-size: 20px;
+}
+
+.userNavigation {
+    display: block;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 10px;
+    margin: 5px 0px;
+    border: none;
+    background: transparent;
+}
+
+
+a.userNavigation:hover {
+    background: #eee;
+    transition: .3s;
+}
+
+.navigation {
+    text-align: left;
+}
+
+span.closeBtn {
+    text-align: right;
+    font-size: 25px;
+    color: #ff0000;
+    background: #eee;
+    padding: 0px 8px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    left: 100px;
+}
+
+span.closeBtn:hover {
+    background: var(--black-color);
+    transition: .3s;
+}
+
+
+
+h3.alertText {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+span.iconShow {
+    text-align: center;
+    color: #33ff00;
+    font-size: 45px;
+}
+
+#modal-body {
+    text-align: center;
+}
+/* Responsive css start from here  */
+
+@media only screen and (max-width: 992px) {
+    
+    nav.navbar.navbar-expand-lg.navbar-light.fixed-top {
+        padding: 2px 0px 0px 0px;
+        background: aliceblue;
+    }
+
+    img.profileImage {
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+        margin-left: 40px;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+    a#navBar {
+        display: block;
+        margin: 5px 5px;
+    }
+
+    input#searchInput {
+        width: 90%;
+        outline: navajowhite;
+        padding: 15px 45px;
+        border: none;
+        border-radius: 35px;
+        font-size: 18px;
+    }
+
+    img.profileImage {
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+        margin-left: 40px;
+        cursor: pointer;
+    }
+
+
+    .featuresSection {
+        position: inherit;
+        width: 100%;
+        top: 0vh;
+        padding: 100px 0px 0px 0px;
+        background: #ededed;
+    }
+
+    .featureBox .icon i {
+    
+        left: 0px;
+    }
+
+    .packagesSection {
+        padding: 90px 0px 60px 0px;
+    }
+
+
+    textarea, input#inputField {
+        width: 80%;
+
+    }
+    .secureRoute {
+        display: block;
+    }
+
+    .userProfileInfo {
+        position: absolute;
+        background: white;
+        padding: 10px 0px;
+        width: 250px;
+        border-radius: 10px;
+        text-align: center;
+        top: 95%;
+        box-shadow: 1px 1px 5px #898181f2;
+        left: 8%;
+    }
+
+    .tabBox {
+        padding: 10px 10px;
+        margin: 0px 5px;
+    }
+
+    h3.serviceName {
+        font-size: 15px;
+    }
+
+    span.serviceIcon {
+        font-size: 20px;
+    }
+
+    span.packageType {
+        left: 82%;
+    }
+
+    img.foodImage {
+        width: 100%;
+        height: 130px;
+    }
+    span.saleBadge {
+        bottom: 125px;
+        left: 5px;
+        font-size: 12px;
+    }
+
+    span.cartBadge {
+        position: relative;
+        bottom: 30px;
+        left: 47%;
+        cursor: pointer;
+        background: #ff0000;
+        color: var(--white-color);
+        padding: 5px 10px;
+        font-size: 15px;
+        border-radius: 6px;
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+
+    .featureBox {
+        margin: 20px 0px;
+    }
+
+
+    h2.sectionName {
+        font-size: 40px;
+    }
+
+    h3.newLetterAlert {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .tabBox {
+        padding: 10px 10px;
+        margin: 0px 2px;
+    }
+    
+    h3.serviceName {
+        font-size: 9px;
+    }
+
+    span.serviceIcon {
+        font-size: 15px;
+    }
+    textarea, input#inputField {
+        width: 100%;
+    }
+
+    .titleAndSl {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .imgAndPrice img {
+        width: 100px;
+        border-radius: 10px;
+        margin-right: 20px;
+    }
+
+    span.price {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    span.remove {
+        font-size: 25px;
+        color: red;
+        border-radius: 100%;
+        background: var(--btn-color);
+        padding: 0px 10px;
+        cursor: pointer;
+    }
+
+    .someAddition p.desc {
+        font-size: 20px;
+        font-weight: 500;
+        width: 100%;
+        margin: auto;
+        line-height: 40px;
+        padding: 10px 0px 40px 0px;
+    }
+
+    h2.title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    input#searchInput {
+        width: 90%;
+        font-size: 10px;
+    }
+    .titleAndSl {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .imgAndPrice img {
+        width: 80px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+
+    span.price {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    span.remove {
+        font-size: 20px;
+        color: red;
+        border-radius: 100%;
+        background: var(--btn-color);
+        padding: 0px 5px;
+        cursor: pointer;
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+
+    h2.sectionName {
+        font-size: 27px;
+    }
+
+    .sectionTitle {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .sTab {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 30px;
+    }
+    .bannerSec {
+        overflow: hidden;
+        display: block;
+        padding-right: 20px;
+    }
+
+    .tabBox {
+        padding: 10px 10px;
+        margin: 5px 5px;
+    }
+
+    
+    textarea, input#inputField {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    span.type {
+        display: none;
+    }
+
+    .dualInfo {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .packageDetails {
+        margin: 20px 0px;
+    }
+}
