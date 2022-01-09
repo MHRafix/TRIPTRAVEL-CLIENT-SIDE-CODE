@@ -6,7 +6,6 @@ import BookPackage from './pages/HomePage/BookPackege/BookPackage';
 import HomePage from './pages/HomePage/HomePage';
 import PrivateRoute from './pages/PrivatePage/PrivateRoute';
 import Header from './pages/SharedConponents/Header/Header';
-import AllBookedPackages from './pages/AllBookedPackages/AllBookedPackages';
 import AddPackage from './pages/AddPackages/AddPackage';
 import Footer from './pages/SharedConponents/Footer/Footer';
 import Signup from './pages/Account/Signup/Signup';
@@ -17,16 +16,24 @@ import Tours from './pages/TourPage/Tours';
 import Resturants from './pages/ResturantsPage/Resturants';
 import MyTrips from './pages/UserDashboard/MyTrips/MyTrips';
 import { Spinner } from 'react-bootstrap';
-import useGet from './CustomHooks/useGet';
+import Hotels from './pages/HotelPage/Hotels';
+import { useState } from 'react';
 
 function App() {
 
-  // Import loader gif statements
-  const { getting } = useGet("foods");
+   // Take a state for displaying initial spinner
+   const [ initialLoader, setInitialLoader ] = useState(true);
+  
+   // Declare a timeOut function
+   const timeOut = () => {
+     setInitialLoader(false);
+   }
+   // Initialize timeOut function here
+   setTimeout(timeOut, 5000);
   
   return (
     <div className="App">
-    { getting ? <div className="initialLoader text-center"><Spinner animation="grow" variant="danger" /></div> :
+    { initialLoader ? <div className="initialLoader text-center"><Spinner animation="grow" variant="danger" /></div> :
      <AuthProvider>
        <BrowserRouter>
        <Header />
@@ -42,6 +49,9 @@ function App() {
            </Route>
            <Route exact path="/resturants">
              <Resturants />
+           </Route>
+           <Route exact path="/hotels">
+             <Hotels />
            </Route>
            <Route exact path="/saved">
              <Trips />

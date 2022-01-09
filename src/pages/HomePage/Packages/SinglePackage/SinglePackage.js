@@ -16,7 +16,7 @@ const SinglePackage = ({data}) => {
       const { getData } = useGet('savedTrip');
 
       // Destructuring the package data
-      const { name, age, salePrice, regularPrice, location, duration, difficulties, typology, description } = data.infoData;
+      const { name, salePrice, location, typology, description } = data.infoData;
       const { _id, thumbnail } = data;
      
       // Handle route changing
@@ -24,7 +24,6 @@ const SinglePackage = ({data}) => {
             history.push(`/packages/bookPackage/${id}`);
       }
       
-      console.log(data);
       
       // Trip data
       const favTrip = {

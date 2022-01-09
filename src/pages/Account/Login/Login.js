@@ -2,10 +2,11 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../CustomHooks/useAuth';
+import Account from '../../../account.png';
 
 const Login = () => {
 
-    const { user, handleGoogleSignin, handleGithubSignin } = useAuth();
+    const { user, handleGoogleSignin } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -23,14 +24,6 @@ const Login = () => {
 
     }
 
-    // Handle github signin
-    const githubSignin = () => {
-        handleGithubSignin()
-        .then(res => {
-              history.push(redirectUrl);
-        })
-
-    }
     // Prevent the fake users
         if(user.email){
             history.push(redirectUrl);
@@ -45,7 +38,7 @@ const Login = () => {
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12">
                                 <div className="loginImg">
-                                <img src="https://i.ibb.co/zJFg1xf/585-5858646-family-travel-vector-hd-png-download.png" alt="loginImg" />
+                                <img src={ Account } alt="loginImg" />
                               </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12">

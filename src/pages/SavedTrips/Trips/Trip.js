@@ -37,7 +37,7 @@ const Trip = ({data}) => {
                   setSelectedData(true);
                   setShowModal(true);
                   } } className="actionBtn"><i className="fas fa-eye"></i></button>
-                <button onClick={ ()=> setShowModal(true) } className="actionBtn"><i className="fas fa-times"></i></button></span>
+                <button onClick={ () => setShowModal(true) } className="actionBtn"><i className="fas fa-times"></i></button></span>
               </div>
             </div>
         </div>

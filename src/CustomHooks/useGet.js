@@ -7,7 +7,7 @@ const useGet = (url) => {
 
         useEffect(() => {
             setGetting(true);
-            const link = `https://desolate-sands-19606.herokuapp.com/${url}`;
+            const link = `https://fathomless-thicket-49916.herokuapp.com/${url}`;
             fetch(link)
             .then(res => res.json())
             .then(data => {

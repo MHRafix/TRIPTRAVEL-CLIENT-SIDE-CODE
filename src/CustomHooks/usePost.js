@@ -8,7 +8,7 @@ const usePost = () => {
 
     const handlePost = (data, url) => {
         setPosting(true);
-        axios.post(`https://desolate-sands-19606.herokuapp.com/${url}`, data)
+        axios.post(`https://fathomless-thicket-49916.herokuapp.com/${url}`, data)
         .then(res => {
           if(res.data.insertedId){
             setPosting(false);

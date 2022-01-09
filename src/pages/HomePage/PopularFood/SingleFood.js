@@ -98,8 +98,6 @@ const SingleFood = ({data}) => {
           email: user.email
     };
 
-    console.log(orderFood);
-
     return (
                         <Col>
                             <div className="packageBox">

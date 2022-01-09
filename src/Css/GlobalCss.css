@@ -140,7 +140,7 @@ a#navBar:hover {
 }
 
 .regularBtn {
-    background: var(--btn-color);
+    background: #000;
     border-radius: 50px;
     border-style: none;
     color: #FFFFFF;
@@ -153,9 +153,6 @@ a#navBar:hover {
     margin: 0px 5px;
 }
 
-.regularBtn:hover {
-    background: #0f899c;
-}
 /******************************
 * Header css ends to here 
 ******************************/
@@ -667,7 +664,7 @@ input#inputHolder {
     padding: 10px 15px;
     font-size: 18px;
     border-radius: 30px;
-    border: 1px solid var(--btn-color);
+    border: 1px solid #000;
     margin: 10px 0px;
     outline: none;
     width: 100%;
@@ -684,7 +681,7 @@ button.apiOption {
     color: white;
     border-radius: 100px;
     padding: 7px 0px;
-    background: var(--btn-color);
+    background: #000;
     border: none;
     margin: 8px 0px;
     font-size: 18px;
@@ -1098,6 +1095,129 @@ span.iconShow {
 #modal-body {
     text-align: center;
 }
+
+
+
+
+/* Hotels page css starts from here  */
+
+.feautresBox {
+    display: flex;
+    border: 1px solid gray;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    border-left: 10px solid #641c29;
+    
+}
+
+.icon {
+    margin:  0px 10px;
+}
+
+.icon i {
+    font-size: 25px;
+    color: #ff0000;
+}
+
+span.title {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+span.subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-left: 5px;
+}
+
+
+
+.sideBar {
+    padding: 10px;
+    box-shadow: 1px 1px 6px #77767654;
+    border-radius: 10px;
+}
+
+.features {
+    margin-bottom: 30px;
+}
+
+.hotelsCard {
+    padding: 15px;
+    box-shadow: 1px 1px 6px #664e4e8c;
+    border-radius: 10px;
+}
+
+
+.hotelsCard {
+    display: flex;
+}
+
+.image {
+    display: block;
+}
+
+img.hotelImage {
+    width: 300px;
+    height: 200px;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.anothersInfo {
+    color: #555;
+    font-size: 15px;
+}
+
+
+h2.hotelName {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.hotelsInfo {
+    margin-left: 15px;
+}
+
+span.regularPrice {
+    color: #333;
+    font-size: 15px;
+    text-decoration: line-through;
+    margin: 0px 10px;
+}
+
+span.bill {
+    font-size: 25px;
+    font-weight: 700;
+    display: block;
+    margin-left: 10px;
+}
+
+span.billtext {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+span.title {
+    font-size: 20px;
+    /* padding-bottom: 26px!important; */
+}
+
+.othersInfo {
+    color: #555;
+    font-size: 15px;
+}
+
+
+span.contactInfo i {
+    color: #000;
+}
+
 /* Responsive css start from here  */
 
 @media only screen and (max-width: 992px) {
@@ -1164,7 +1284,6 @@ span.iconShow {
     .secureRoute {
         display: block;
     }
-
     .userProfileInfo {
         position: absolute;
         background: white;
@@ -1172,7 +1291,7 @@ span.iconShow {
         width: 250px;
         border-radius: 10px;
         text-align: center;
-        top: 95%;
+        top: 75%;
         box-shadow: 1px 1px 5px #898181f2;
         left: 8%;
     }

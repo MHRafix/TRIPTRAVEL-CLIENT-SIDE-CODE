@@ -6,9 +6,7 @@ import useGet from '../../../CustomHooks/useGet';
 const Packages = () => {
       
     // Import use apckages custom hook
-    const { getData, getting } = useGet("travelPackages");
-    console.log(getData);
-
+    const { getData, getting } = useGet("tripPack");
     return (
         <section>
         <div className="packagesSection" id="packages">

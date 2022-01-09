@@ -5,7 +5,7 @@ import SinglePackage from '../HomePage/Packages/SinglePackage/SinglePackage';
 
 const Tour = () => {
         // Import use apckages custom hook
-        const { getData, getting } = useGet("allTravelPackage");
+        const { getData, getting } = useGet("allTripPack");
     return (
         <section>
         <div className="packagesSection" id="packages">
