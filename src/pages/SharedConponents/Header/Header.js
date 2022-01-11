@@ -36,7 +36,7 @@ const Header = () => {
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Link id="navBar" to="/home"><span className="menuIcon fas fa-home"></span> Home</Link>
-                            <Link id="navBar" to="/siteReview"><span className="menuIcon far fa-comment"></span> Review</Link>
+                            <Link id="navBar" to="/aboutus"><span className="menuIcon fas fa-user"></span> About Us</Link>
                             <Link id="navBar" to="/saved"><span className="menuIcon far fa-heart"></span> Saved({savedData ? savedData.length : "0"})</Link>
                             {user.email ? <img onClick={() => setToggle(true)} className="profileImage" src={user.photoURL} alt="profilePic" /> : <Link className="signinBtn" to="/login">Sign in</Link>}
 
@@ -44,15 +44,14 @@ const Header = () => {
                             <span onClick={ () => setToggle(false)} className="closeBtn">&times;</span> 
                                 <img className="profileImageLg" src={user.photoURL} alt="profileImage" />
                                 <h3 className="userName">{user.displayName}</h3>
-                                <button className="signinBtn">View Profile</button>
+                                {/* <button className="signinBtn">View Profile</button> */}
                                 <hr />
 
                                 <div className="navigation">
-                                    <Link className="userNavigation" to="/myTrips"><i class="fas fa-suitcase-rolling"></i> &nbsp; My Trip</Link>
+                                    <Link className="userNavigation" to="/myTrips"><i className="fas fa-suitcase-rolling"></i> &nbsp; My Trip</Link>
                                     <Link className="userNavigation" to="/cartedFoods"><span className="menuIcon fas fa-shopping-cart"></span> Cart Foods</Link>
-                                    <Link className="userNavigation" to="/myFoods"><i class="fas fa-hamburger"></i> &nbsp; My Foods</Link>
-                                    <Link className="userNavigation" to="/editProfile"><i class="fas fa-edit"></i> &nbsp; Edit Profile</Link>
-                                    <button onClick={() => setShowCnf(true)} className="userNavigation"><i class="fas fa-sign-out-alt"></i> &nbsp; Log Out</button>
+                                    <Link className="userNavigation" to="/myFoods"><i className="fas fa-hamburger"></i> &nbsp; My Foods</Link>
+                                    <button onClick={() => setShowCnf(true)} className="userNavigation"><i className="fas fa-sign-out-alt"></i> &nbsp; Log Out</button>
                                 </div>
                             </div>}
                         </Nav>
@@ -63,9 +62,9 @@ const Header = () => {
             </div>
             {showCnf &&  <Modal show={showCnf}>
         <Modal.Body id="modal-body">
-            <span className="iconShow"><i class="fas fa-check-circle"></i></span> <br />
-            <h3 className="alertText">Do you want to signout ?</h3>
-            <button onClick={() => setShowCnf(false)} className="signinBtn">Cancel</button> &nbsp;&nbsp;
+            <span className="iconShow"><i className="fas fa-sign-out-alt"></i></span> <br />
+            <h5 className="alertText">Do you want to logout ?</h5>
+            <button onClick={() => setShowCnf(false)} className="signinBtn">No</button> &nbsp;&nbsp;
             <button onClick={() => {
                 setShowCnf(false);
                 setToggle(false);

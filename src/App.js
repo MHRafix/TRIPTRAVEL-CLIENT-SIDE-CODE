@@ -5,9 +5,7 @@ import Login from './pages/Account/Login/Login';
 import BookPackage from './pages/HomePage/BookPackege/BookPackage';
 import HomePage from './pages/HomePage/HomePage';
 import PrivateRoute from './pages/PrivatePage/PrivateRoute';
-import Header from './pages/SharedConponents/Header/Header';
 import AddPackage from './pages/AddPackages/AddPackage';
-import Footer from './pages/SharedConponents/Footer/Footer';
 import Signup from './pages/Account/Signup/Signup';
 import Notfound from './pages/404Page/Notfound';
 import Trips from './pages/SavedTrips/Trips';
@@ -29,14 +27,15 @@ function App() {
      setInitialLoader(false);
    }
    // Initialize timeOut function here
-   setTimeout(timeOut, 5000);
+   setTimeout(timeOut, 4000);
   
   return (
     <div className="App">
-    { initialLoader ? <div className="initialLoader text-center"><Spinner animation="grow" variant="danger" /></div> :
+    { initialLoader ? <div className="initialLoader text-center"><Spinner animation="grow" variant="danger" /> <br />
+    <h5 className="loadingData">Loading...</h5>
+    </div> :
      <AuthProvider>
        <BrowserRouter>
-       <Header />
          <Switch>
            <Route exact path="/">
              <HomePage />
@@ -59,9 +58,9 @@ function App() {
            <Route exact path="/cartedFoods">
              <Cart />
            </Route>
-           <PrivateRoute exact path="/packages/bookPackage/:uniqueId">
+           <Route exact path="/packages/bookPackage/:uniqueId">
              <BookPackage />
-           </PrivateRoute>
+           </Route>
            <PrivateRoute exact path="/myTrips">
              <MyTrips />
            </PrivateRoute>
@@ -78,7 +77,6 @@ function App() {
              <Notfound />
            </Route>
          </Switch>
-         <Footer />
        </BrowserRouter>
        </AuthProvider>} 
     </div>

@@ -5,6 +5,8 @@ import useGet from '../../CustomHooks/useGet';
 import Trip from './Trips/Trip';
 import { Link } from 'react-router-dom';
 import useAuth from '../../CustomHooks/useAuth';
+import Header from '../SharedConponents/Header/Header';
+import Footer from '../SharedConponents/Footer/Footer';
 
 const Trips = () => {
 
@@ -20,12 +22,13 @@ const Trips = () => {
     }
     return (
         <div className="homePage">
+            <Header />
             <ServicesTab/>
  
           <div className="container">
           <div className="savedToursSection">
+                    <div class="sectionTitle2"><h2 class="sectionName">Saved <span class="highlightPart">Tours</span></h2></div>
                 {getting ? <div className="text-center"><Spinner animation="border" variant="danger" /></div> :<div className="sectionWrapper"> <br /><br />
-                    <div class="sectionTitle"><h2 class="sectionName">Saved <span class="highlightPart">Tours</span></h2></div>
                        <Row xs={1} md={3} className="g-4">
                          {
                             currentUserData.map(data => <Trip key={data._id} data={data} /> )
@@ -36,7 +39,8 @@ const Trips = () => {
                 </div>}
                 </div>}
             </div> 
-        </div>
+        </div> <br /> <br />
+        <Footer />
     </div>
     );
 };

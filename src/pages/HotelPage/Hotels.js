@@ -2,6 +2,8 @@ import React from 'react';
 import { Col, Row, Spinner } from 'react-bootstrap';
 import useGet from '../../CustomHooks/useGet';
 import ServicesTab from '../HomePage/Services/ServicesTab';
+import Footer from '../SharedConponents/Footer/Footer';
+import Header from '../SharedConponents/Header/Header';
 import HotelCard from './HotelCard';
 
 const Hotels = () => {
@@ -11,6 +13,7 @@ const Hotels = () => {
 
     return (
         <div className="homePage">
+          <Header />
             <ServicesTab />
             <div className="packagesSection" id="packages">
             <div className="packages">
@@ -73,7 +76,7 @@ const Hotels = () => {
                              </div>
                            </div>
                            <div className="col-lg-9 col-md-9 col-sm-12">
-                          { getting && <div className="loaderGif text-center"><Spinner animation="border" variant="danger" /></div>}
+                          { getting && <div className="loaderGif text-center"><Spinner animation="border" variant="danger" /></div> }
                         <Row xs={1} md={1} className="g-4">
                           {
                             getData.map(data => <HotelCard key={data._id} hotelsData={data} />)
@@ -85,6 +88,7 @@ const Hotels = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

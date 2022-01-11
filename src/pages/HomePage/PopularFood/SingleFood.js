@@ -36,7 +36,7 @@ const SingleFood = ({data}) => {
 
     const handleOrder = (data, url) => {
         setOrdering(true);
-        axios.post(`https://desolate-sands-19606.herokuapp.com/${url}`, data)
+        axios.post(`https://fathomless-thicket-49916.herokuapp.com/${url}`, data)
         .then(res => {
           if(res.data.insertedId){
             setOrdering(false);
@@ -88,7 +88,6 @@ const SingleFood = ({data}) => {
    // Order selected food
     const orderFood = {
           name,
-          uniqueID: _id,
           thumbnail,
           salePrice,
           regularPrice,
@@ -123,8 +122,10 @@ const SingleFood = ({data}) => {
                                     fullSymbol="fas fa-star"
                                     />(434)
                                     </span><br />
+                                    <div className="prices">
                                       <span className="disablePrice">${regularPrice}</span>
                                       <span className="Price">${salePrice}</span>
+                                    </div>
                                   </div>
                                   <button onClick={() => {
                                     if(user.email){
