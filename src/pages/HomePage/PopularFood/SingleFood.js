@@ -1,11 +1,12 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import useAnimation from '../../../CustomHooks/useAnimation';
 import { Col, Modal, Spinner } from 'react-bootstrap';
-import Rating from 'react-rating';
-import { useHistory } from 'react-router-dom';
+import usePost from '../../../CustomHooks/usePost';
 import useAuth from '../../../CustomHooks/useAuth';
 import useGet from '../../../CustomHooks/useGet';
-import usePost from '../../../CustomHooks/usePost';
+import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import Rating from 'react-rating';
+import axios from 'axios';
 
 const SingleFood = ({data}) => {
     // const [ showModal, setShowModal ] = useState(false);
@@ -53,7 +54,8 @@ const SingleFood = ({data}) => {
           thumbnail,
           salePrice,
           regularPrice,
-          email: user.email
+          email: user.email,
+          quantity: 1
     };
 
  
@@ -94,12 +96,16 @@ const SingleFood = ({data}) => {
           customerName: cmName,
           customerPhone: cmPhone,
           customerAddress: cmAddress,
-          email: user.email
+          email: user.email,
+          quantity: 1
     };
+
+  //Import useAnimation here from custom hooks
+  useAnimation();
 
     return (
                         <Col>
-                            <div className="packageBox">
+                            <div className="packageBox" data-aos="fade-up">
                                 <div className="imgAndType">
                                   <img className="foodImage" src={`data:image/gif;base64,${thumbnail}`} alt="parisImage" />
                                   {salePrice !== "0" ? <span className="saleBadge"> - { perchant }%</span> : <></> }
@@ -123,8 +129,8 @@ const SingleFood = ({data}) => {
                                     />(434)
                                     </span><br />
                                     <div className="prices">
-                                      <span className="disablePrice">${regularPrice}</span>
-                                      <span className="Price">${salePrice}</span>
+                                      {salePrice > 0 ? <span className="disablePrice">${regularPrice}</span> : <></>}
+                                      <span className="Price">${salePrice > 0 ? salePrice : regularPrice}</span>
                                     </div>
                                   </div>
                                   <button onClick={() => {

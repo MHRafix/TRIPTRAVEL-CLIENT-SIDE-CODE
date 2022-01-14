@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Alert, Col, Modal, Spinner } from 'react-bootstrap';
-import Rating from 'react-rating';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { Alert, Col, Modal, Spinner } from 'react-bootstrap';
+import useAnimation from '../../../CustomHooks/useAnimation';
 import useDelete from '../../../CustomHooks/useDelete';
-
+import React, { useState } from 'react';
+import Rating from 'react-rating';
 
 const Trip = ({data}) => {
 
@@ -24,9 +24,13 @@ const Trip = ({data}) => {
          const handleBookPackageBtn = id => {
           history.push(`/packages/bookPackage/${id}`);
     }
+
+    // Import useAnimation here from custom hooks
+    useAnimation();
+
     return (
         <Col>
-        <div className="savedCard">
+        <div className="savedCard" data-aos="fade-up">
             <div className="nameAndImg">
                 <img className="miniImg" src={`data:image/gif;base64,${thumbnail}`} alt="miniThumbnail" />  
                 <div className="actionBtn">

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Modal, Spinner } from 'react-bootstrap';
-import Rating from 'react-rating';
-import { useHistory } from 'react-router-dom';
 import usePost from '../../../../CustomHooks/usePost';
-import useGet from '../../../../CustomHooks/useGet';
 import useAuth from '../../../../CustomHooks/useAuth';
+import useGet from '../../../../CustomHooks/useGet';
+import { Modal, Spinner } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import Rating from 'react-rating';
+import useAnimation from '../../../../CustomHooks/useAnimation';
 
 const SinglePackage = ({data}) => {
 
@@ -16,12 +17,17 @@ const SinglePackage = ({data}) => {
       const { getData } = useGet('savedTrip');
 
       // Destructuring the package data
-      const { name, salePrice, location, typology, description } = data.infoData;
+      const { name, salePrice, regularPrice, location, typology, description } = data.infoData;
       const { _id, thumbnail } = data;
+
+      // Calculate discount percetage
+    const modular = regularPrice / 100;
+    const deference = regularPrice - salePrice;
+    const perchant = Math.ceil(deference / modular); 
      
       // Handle route changing
       const handleBookPackageBtn = id => {
-            history.push(`/packages/bookPackage/${id}`);
+            history.push(`/singleTrips/allTripPack/${id}`);
       }
       
       
@@ -70,10 +76,15 @@ const SinglePackage = ({data}) => {
     }
   }
 
+  //Import useAnimation here
+  useAnimation();
+
+
+
     return (
         <>
             <div className="col-lg-4 col-md-6 col-sm-12">
-                            <div className="packageBox">
+                            <div className="packageBox" data-aos="fade-up">
                                 <div className="imgAndType">
                                 {success || depend ? <span className="savedPack">
                                    <i className="fas fa-heart"></i>
@@ -82,7 +93,7 @@ const SinglePackage = ({data}) => {
                                   <i className="far fa-heart"></i>
                                   </span>}
                                   <img src={`data:image/gif;base64,${thumbnail}`} alt="parisImage" />
-                                  <span className="packageType">-20%</span>
+                                  {salePrice !== "0" ? <span className="packageType">-{perchant}%</span> : <></>}
                                 </div>
                                 
                                 <div  onClick={ () => handleBookPackageBtn(_id)}  className="nameAndDestination">
@@ -95,7 +106,7 @@ const SinglePackage = ({data}) => {
                                     fullSymbol="fas fa-star"
                                     />(434)
                                     </span><br />
-                                      <span className="price">${salePrice}</span>
+                                      <span className="price">${salePrice > 0 ? salePrice : regularPrice}</span>
                                   </div>
                                 </div>
                             </div>

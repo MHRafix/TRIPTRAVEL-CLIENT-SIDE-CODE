@@ -1,21 +1,21 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import './Css/GlobalCss.css';
-import AuthProvider from './Context/AuthProvider';
-import Login from './pages/Account/Login/Login';
 import BookPackage from './pages/HomePage/BookPackege/BookPackage';
-import HomePage from './pages/HomePage/HomePage';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PrivateRoute from './pages/PrivatePage/PrivateRoute';
-import AddPackage from './pages/AddPackages/AddPackage';
-import Signup from './pages/Account/Signup/Signup';
-import Notfound from './pages/404Page/Notfound';
-import Trips from './pages/SavedTrips/Trips';
-import Cart from './pages/CartPage/Cart';
-import Tours from './pages/TourPage/Tours';
-import Resturants from './pages/ResturantsPage/Resturants';
 import MyTrips from './pages/UserDashboard/MyTrips/MyTrips';
-import { Spinner } from 'react-bootstrap';
+import Resturants from './pages/ResturantsPage/Resturants';
+import Signup from './pages/Account/Signup/Signup';
+import AuthProvider from './Context/AuthProvider';
+import HomePage from './pages/HomePage/HomePage';
+import Login from './pages/Account/Login/Login';
+import Notfound from './pages/404Page/Notfound';
 import Hotels from './pages/HotelPage/Hotels';
+import Trips from './pages/SavedTrips/Trips';
+import Tours from './pages/TourPage/Tours';
+import { Spinner } from 'react-bootstrap';
+import Cart from './pages/CartPage/Cart';
 import { useState } from 'react';
+import './Css/GlobalCss.css';
+import MyFoods from './pages/UserDashboard/MyFoods/MyFoods';
 
 function App() {
 
@@ -55,17 +55,17 @@ function App() {
            <Route exact path="/saved">
              <Trips />
            </Route>
-           <Route exact path="/cartedFoods">
+           <PrivateRoute exact path="/cartedFoods">
              <Cart />
-           </Route>
-           <Route exact path="/packages/bookPackage/:uniqueId">
+           </PrivateRoute>
+           <Route exact path="/:url/:subUrl/:uniqueId">
              <BookPackage />
            </Route>
            <PrivateRoute exact path="/myTrips">
              <MyTrips />
            </PrivateRoute>
-           <PrivateRoute exact path="/postPackage">
-             <AddPackage />
+           <PrivateRoute exact path="/myFoods">
+             <MyFoods />
            </PrivateRoute>
            <Route exact path="/login">
              <Login />

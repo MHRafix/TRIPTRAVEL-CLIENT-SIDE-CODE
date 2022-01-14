@@ -22,7 +22,7 @@ const useDelete = (link) => {
             });
            }
            
-    return { handleDelete, deleting, showAlert };
+    return { handleDelete, deleting, showAlert, setShowAlert };
 };
 
 export default useDelete;

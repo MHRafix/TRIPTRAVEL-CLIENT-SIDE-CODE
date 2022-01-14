@@ -9,7 +9,7 @@ import HotelCard from './HotelCard';
 const Hotels = () => {
 
   // Import the use get data fro the node server
-  const { getData, getting } = useGet("hotels");
+  const { getData, getting } = useGet("allHotelBed");
 
     return (
         <div className="homePage">
@@ -22,8 +22,8 @@ const Hotels = () => {
                         <h2 className="sectionName">Hotels <span className="highlightPart">to Stay</span></h2>
                     </div>
                        <div className="features">
-                           <Row className="featuresArea">
-                               <Col>
+                           <Row xs={1} md={2} gy={2} className="featuresArea">
+                               <Col className='mb-2'>
                                  <div className="feautresBox">
                                      <div className="icon">
                                        <i className="fas fa-user-shield"></i>
@@ -34,7 +34,7 @@ const Hotels = () => {
                                      </div>
                                  </div>
                                </Col>
-                               <Col>
+                               <Col className='mb-2'>
                                  <div className="feautresBox">
                                      <div className="icon">
                                        <i className="fas fa-user-shield"></i>
@@ -45,7 +45,7 @@ const Hotels = () => {
                                      </div>
                                  </div>
                                </Col>
-                               <Col>
+                               <Col className='mb-2'>
                                  <div className="feautresBox">
                                      <div className="icon">
                                        <i className="fas fa-user-clock"></i>
@@ -55,8 +55,8 @@ const Hotels = () => {
                                          <span className="subtitle">24/7 hours</span>
                                      </div>
                                  </div>
-                               </Col>
-                               <Col>
+                               </Col> <br />
+                               <Col className='mb-2'>
                                  <div className="feautresBox">
                                      <div className="icon">
                                        <i className="fas fa-feather"></i>
@@ -70,12 +70,12 @@ const Hotels = () => {
                            </Row>
                        </div>
                        <div className="row">
-                           <div className="col-md-3 col-sm-12">
+                           <div className="col-lg-3 col-md-12 col-sm-12">
                              <div className="sideBar">
                                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam temporibus quaerat id modi exercitationem mollitia blanditiis assumenda obcaecati non voluptatem?</h1>
                              </div>
                            </div>
-                           <div className="col-lg-9 col-md-9 col-sm-12">
+                           <div className="col-lg-9 col-md-12 col-sm-12">
                           { getting && <div className="loaderGif text-center"><Spinner animation="border" variant="danger" /></div> }
                         <Row xs={1} md={1} className="g-4">
                           {
